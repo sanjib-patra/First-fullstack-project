@@ -8,7 +8,7 @@ function ScoreBord() {
 useEffect(() => {
   const fetchData = async () => {
     try {
-      const res = await axios.get("/User/ScoreBord");
+      const res = await axios.get("https://first-fullstack-project-pzek.onrender.com/User/ScoreBord",{ withCredentials: true });
       console.log(res)
       setData(res.data.data);
     } catch (err) {

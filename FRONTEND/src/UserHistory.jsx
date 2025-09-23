@@ -10,7 +10,7 @@ export function History() {
   useEffect(() => {
     async function fetchHistory() {
       try {
-        const res = await axios.get("/User/History");
+        const res = await axios.get("https://first-fullstack-project-pzek.onrender.com/User/History",{ withCredentials: true });
         setHistory(res.data.history || []);
       } catch (err) {
         console.error("Error fetching history:", err);

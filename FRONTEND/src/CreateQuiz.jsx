@@ -12,11 +12,11 @@ async function handlesubmit(event) {
      alert("⏳ Please wait a moment,and don't click Generate Quiz again  your quiz is generating...");
 
      try{
-        const result=await axios.post("/User/Quiz",{
+        const result=await axios.post("https://first-fullstack-project-pzek.onrender.com/User/Quiz",{
             topic,
             difficulty,
             qnumber
-        })
+        },{ withCredentials: true } )
          setQuizResult(result.data.data);
          console.log(result.data)
          

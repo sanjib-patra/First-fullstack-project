@@ -5,7 +5,7 @@ function Logout(){
 async function handleLogout(){
     console.log("Button was clicked")
 try{
- const LogoutDetais=await axios.get("/User/Logout")
+ const LogoutDetais=await axios.get("https://first-fullstack-project-pzek.onrender.com/User/Logout",{ withCredentials: true })
  console.log(LogoutDetais)
  alert(LogoutDetais.data.message)
 }catch(error){
