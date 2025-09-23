@@ -1,0 +1,53 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+}  */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
+
+.app-wrapper {
+  min-height: 100vh;
+  position: relative;
+
+  /* thin glowing left & right edges */
+  box-shadow: 
+    inset 3px 0 5px rgba(255,0,0,0.4),   /* left edge red */
+    inset -3px 0 5px rgba(0,0,255,0.4);  /* right edge blue */
+}
+
+
+
+input, textarea, select {
+  color: black;             /* typed text */
+  background-color: white;  /* input background */
+}
+
+input::placeholder {
+  color: gray;              /* placeholder text */
+}
