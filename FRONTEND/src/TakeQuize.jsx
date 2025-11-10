@@ -22,7 +22,7 @@ async function handlesubmit(event) {
     return;
   }
     try{
-const sevedquiz=await axios.post("https://first-fullstack-project-pzek.onrender.com/User/SaveQuiz",{
+const sevedquiz=await axios.post("/User/SaveQuiz",{
   answers,
   quiz_id:quiz._id
 },{ withCredentials: true })

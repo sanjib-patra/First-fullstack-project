@@ -12,7 +12,7 @@ export default function Register() {
   const handleSubmit =async (e) => {
     e.preventDefault();
     try{
-  const res=await axios.post("https://first-fullstack-project-pzek.onrender.com/User/Register",
+  const res=await axios.post("User/Register",
       {
         UserName:name,
         email:email,

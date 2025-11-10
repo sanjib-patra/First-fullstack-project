@@ -10,7 +10,7 @@ function Login(){
     const handlesubmit=async(event)=>{
         try{
         event.preventDefault();
-const res=await axios.post("https://first-fullstack-project-pzek.onrender.com/User/Login",{UserName:name,email:email,password:password},{ withCredentials: true })
+const res=await axios.post("/User/Login",{UserName:name,email:email,password:password},{ withCredentials: true })
 alert(res.data.message)
 console.log(name,password,email)
 navigate("/")

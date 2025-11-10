@@ -15,7 +15,7 @@ export function Feedback() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://first-fullstack-project-pzek.onrender.com/User/Feedback", form, { withCredentials: true });
+      await axios.post("/User/Feedback", form, { withCredentials: true });
       alert("✅ Feedback submitted successfully!");
       setForm({ name: "", email: "", experience: "" });
     } catch (err) {
