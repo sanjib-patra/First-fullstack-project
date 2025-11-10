@@ -106,7 +106,7 @@ const LogedinUser=await User.findById(userexist._id).select("-password -RefreshT
 const options = {
   httpOnly: true,
   secure: process.env.NODE_ENV === "production", // true on Render
-  sameSite: "none", // for cross-site frontend/backend
+//   sameSite: "none", // for cross-site frontend/backend
 };
 
 return res
@@ -316,7 +316,7 @@ console.log(userHistory)
 const options = {
   httpOnly: true,
   secure: process.env.NODE_ENV === "production", // true on Render
-  sameSite: "none", // for cross-site frontend/backend
+//   sameSite: "none", // for cross-site frontend/backend
 };
 
 return res
@@ -382,7 +382,7 @@ $unset:{
 const options = {
   httpOnly: true,
   secure: process.env.NODE_ENV === "production", // true on Render
-  sameSite: "none", // for cross-site frontend/backend
+//   sameSite: "none", // for cross-site frontend/backend
 };
 
 res.status(200)

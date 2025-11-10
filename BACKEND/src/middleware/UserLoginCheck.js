@@ -4,7 +4,8 @@ import { ErrorHandler } from "../utils/ErrorHandler.js";
 import { User } from "../models/User.models.js";
 const UserLoginCheck=AsyncHandler(async(req,res,next)=>{
 try{
-const token=req.cookies?.accesstoken || req.header("Authorization")?.replace("Bearer","")
+// const token=req.cookies?.accesstoken || req.header("Authorization")?.replace("Bearer","")
+    let token = req.cookies?.accesstoken;
 
 if(!token){
     throw new ErrorHandler(401,"Unauthorized Request/ Login Required")
